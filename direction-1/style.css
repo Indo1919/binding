@@ -1,179 +1,93 @@
-html {
-	font-family: var(--font-body);
+:root{
+	--color-system: #e4e4e4;
+	--color-ink: #000000;
+	--color-quiet: #555555;
+	--color-navy:#000080;
+	--color-teal: #007070;
+	--color-white:#ffffff;
+
+	--font-display:'VT323', sans-serif;
+	--font-body: 'Atkinson Hyperlegible';
 }
-
-:root {
-
-	/*colors*/
-	--color-fg: #13261b;
-	--color-bg: #f5f6f3;
-	--color-brand: #14613b;
-	--color-images:#0da459;
-	--color-accent: #557060;
-	--color-accent2:#6f6f6f;
-	--color-highlight:#b6f2c6;
-	--color-links: dodgerblue;
-/*Colors where chosen to represent a modern twist to an old green screen display*/
-
-/*fonts*/
-	--font-body:'Fraunces', sans-serif;
-	--font-display:'Space Mono';
-	--font-mono: var(--font-body);
-
-/*sizing*/
-	--size-xlg: 4rem;
-	--size-lg: 3rem;
-	--size-md: 2rem;
-	--size-sm: 1.8rem;
-	--size-xsm:1rem;
-
-	/*general document setup*/
-	color: var(--color-fg);
-	font-size: calc(var(--size-md)/1.5);
-	line-height: 1.45;
-	max-inline-size: 120ch;
-	margin-inline: auto; /*A friend who is a computer engineer gave me feedback and suggested margin-inline: auto. I saw in other projects it was also being used.
-   I chose it to center the content within its container by distributing
-   the available space equally between the two inline margins.*/
-}
-
 
 body{
-	color: var(--color-fg);
-	padding: calc(var(--size-xlg)*1.6);
-	background-color: var(--color-bg);
-	font-weight: 375;
+	font-family: var(--font-body);
+	font-size: calc(var(--base) * 1.06);
+	line-height: 1.65;
+	color:var(--color-ink);
+	background-color: var(--color-system);
+	padding-block: var(--size-lg);
+	padding-inline: var(--size-md);
 }
 
-
-h1,h2,h3 {
+header,footer{
 	font-family: var(--font-display);
+	font-size: calc(var(--base) * 1.125);
+	color: var(--color-quiet);
+	margin-block: var(--size-md);
 }
 
-/*h rules*/
-h1 {
-	color: var(--color-brand);
-	font-size: calc(var(--size-xlg) * 1.4);
-	font-weight: 700;
-	text-transform: uppercase;
-	border-block-end: calc(var(--size-xsm) / 3) solid;
-	padding-block-start: calc(var(--size-xsm)/ 6);
-	margin-block-end: var(--size-sm);
+h1{
+	font-family: var(--font-display);
+	font-size: var(--size-xxlg);
+	line-height: 0.95;
+	color: var(--color-ink);
+	margin-block: var(--size-md);
 }
 
-h2 {
-	font-size: var(--size-md);
-	font-weight: 400;
-	color: var(--color-accent2);
-	text-transform:capitalize;
-	border-block-end: calc(var(--size-xsm)/(100/7)) solid;
-	padding-block-start: var(--size-xsm);
-	position: sticky;
-	inset-block-start:0;
-	background-color: var(--color-bg);
-	padding-block: var(--size-xsm)
+h2{
+	font-family: var(--font-display);
+	font-size: calc(var(--base) * 1.875);
+	color:var(--color-white);
+	background-color: var(--color-navy);
+	padding-inline: var(--size-xsm);
+	margin-block: var(--size-xlg);
 }
 
-h3 {
-	font-size: var(--size-sm);
-	font-weight: 550;
+h3{
+	font-family: var(--font-display);
+	font-size: calc(var(--base) * 1.625);
+	color: var(--color-teal);
+	margin-block:var(--size-md);
 }
 
-footer {
-	text-align: center;
-	padding: 0;
-	margin-block-end: var(--size-lg);
-}
-
-strong {
-	font-weight: 400;
-color:var(--color-brand)
-}
-
-
-a {
-	color: var(--color-links);
-	text-decoration: underline;
-}
-
-em {
-	font-style: italic;
-	color: var(--color-brand);
-}
-
-header{
-	padding-block-end: var(--size-xlg);
-}
-
-
-blockquote {
-	color: var(--color-accent);
-	line-height: calc(var(--size-xsm)*1.4);
-	padding-inline-start: var(--size-lg);
-	padding-block-end: var(--size-xsm);
-	border-inline-start: calc(var(--size-xsm) / 4) solid var(--color-brand);
-	border-radius:calc(var(--size-xsm) / 6);
+p,li{
+	max-inline-size: 65ch;
 	margin-block: var(--size-sm);
 }
 
-/*Used to highlight definitons in the article*/
-mark {
-	background-color: var(--color-highlight);
-	}
-
-/*Written descriptions of the images meant to for readers to use their imagination*/
-.image-description{
-	font-style: italic;
-	color:var(--color-images);
-	margin-inline-start: var(--size-lg);
-	font-size: var(--size-xsm);
+strong{
+	font-weight: 700;
 }
 
-#O-Article{
-	display: block;
-	text-decoration: none;
-	background-color: var(--color-brand);
-	color:var(--color-bg);
-	inline-size: max-content;
-	padding-inline: var(--size-xsm);
-	border-radius: calc(var(--size-xsm)/4);
+em{
+	font-style:italic;
 }
 
-
-#back-to-top{
-	display: block;
-	text-decoration: none;
-	background-color: var(--color-brand);
-	color:var(--color-bg);
-	inline-size: max-content;
-	padding-inline: var(--size-xsm);
-	border-radius: calc(var(--size-xsm)/4);
-
+mark{
+	background-color: var(--color-navy);
+	color:var(--color-white);
 }
 
-li:nth-child(1) {font-size: calc(var(--size-xsm)*0.8);
-}
-li:nth-child(2) {font-size:calc(var( --size-xsm)*1.2);
-}
-li:nth-child(3) {font-size:calc(var(--size-xsm)*1.4);
-}
-li:nth-child(4) {font-size:calc(var(--size-xsm)*1.4);
-}
-li:nth-child(5) {font-size:calc(var(--size-xsm)*1.5);
-}
-li:nth-child(6) {font-size:calc(var(--size-xsm)*2.0);
-}
-li:nth-child(7) {font-size:calc(var(--size-xsm)*2.2);
-}
-li:nth-child(8) {font-size:calc(var(--size-xsm)*3.3);
-}
-
-.custom-underline {
+a{
+	color:var(--color-navy);
 	text-decoration: underline;
 }
 
-* + * {
-	margin-block-start: var(--size-xsm);
+blockquote{
+	font-family: var(--font-display);
+	font-size:var(--size-lg);
+	line-height: 1.2;
+	color:var(--color-navy);
+	margin-block:var(--size-lg);
 }
 
+.image-description{
+	font-style:italic;
+	font-size:calc(var(--base) * 0.93);
+	color: var(--color-teal);
+}
 
+.custom-underline{
+	text-decoration: underline;
+}
