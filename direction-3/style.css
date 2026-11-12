@@ -66,7 +66,7 @@ em{
 
 mark{
 	background-color:var(--color-grey);
-	color:var(--color-ink)
+	color:var(--color-ink);
 }
 
 a{
@@ -81,6 +81,9 @@ blockquote{
 	text-align: center;
 	color: var(--color-blue);
 	margin-block: var(--size-lg);
+	background-color: var(--color-grey);
+	padding-block: var(--size-md);
+	padding-inline: var(--size-md);
 }
 
 .image-description{
