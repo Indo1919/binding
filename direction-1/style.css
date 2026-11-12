@@ -1,3 +1,6 @@
+/*Idea is to represent an early. windows interface and desktop computers as the articles topics are around interfaces and designing for them. Designed to look like old systtem windows and old interface highlights with intent. Fonts chosen are made to communicate the screen voice and then Atkinson is used to made it easy to read while still communicating intent.*/
+
+/*general doc setup*/
 :root{
 	--color-system: #e4e4e4;
 	--color-ink: #000000;
@@ -10,6 +13,7 @@
 	--font-body: 'Atkinson Hyperlegible';
 }
 
+/*started with the text and the built up*/
 body{
 	font-family: var(--font-body);
 	font-size: calc(var(--base) * 1.06);
@@ -20,6 +24,7 @@ body{
 	padding-inline: var(--size-md);
 }
 
+/*top bar and info use the screen font like system text*/
 header,footer{
 	font-family: var(--font-display);
 	font-size: calc(var(--base) * 1.125);
@@ -35,6 +40,7 @@ h1{
 	margin-block: var(--size-md);
 }
 
+/*section title sit in a navy bar like a bar of a window*/
 h2{
 	font-family: var(--font-display);
 	font-size: calc(var(--base) * 1.875);
@@ -64,6 +70,7 @@ em{
 	font-style:italic;
 }
 
+/*intent is for highlights to look like text you selected on a computer*/
 mark{
 	background-color: var(--color-navy);
 	color:var(--color-white);
@@ -82,6 +89,7 @@ blockquote{
 	margin-block:var(--size-lg);
 }
 
+/*made so the image descriptions read differently from the text*/
 .image-description{
 	font-style:italic;
 	font-size:calc(var(--base) * 0.93);
@@ -92,6 +100,7 @@ blockquote{
 	text-decoration: underline;
 }
 
+/*text looks like an open windown on the grey desktop*/
 main{
 	background-color: var(--color-white);
 	padding-block: var(--size-sm);

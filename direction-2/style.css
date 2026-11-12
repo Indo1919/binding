@@ -1,3 +1,6 @@
+/*taking design inspiration from the Fenton articles the intent behind this direction is for it to communicate the idea of change over time. A screen changes, a conversation moving to what is next, and an idea that is going through drafts and evolivng. This design is intended to communicate more like a film poster and a film strip behind it.*/
+
+/*general doc setup*/
 :root{
 --color-screen: #111111;
 --color-ink: #f4f1ea;
@@ -10,6 +13,7 @@
 --font-label: "IBM Plex Mono";
 }
 
+/*paragraph text is a little bigger so the whole page feels more dramatic*/
 body{
 	font-family:var(--font-body);
 	font-size:var(--size-md);
@@ -20,6 +24,7 @@ body{
 	padding-inline:var(--size-md);
 }
 
+/*intent is for this to look like a film credit*/
 header,footer{
 	font-family:var(--font-label);
 	font-size: calc(var(--base) * 0.68);
@@ -28,6 +33,7 @@ header,footer{
 	margin-block: var(--size-md);
 }
 
+/*intent to look like a poster*/
 h1{
 	font-family:var(--font-display);
 	font-size: calc(var(--base) * 5);
@@ -56,6 +62,7 @@ h3{
 	margin-block: var(--size-md);
 }
 
+/*keeps lines from getting to long*/
 p,li{
 	max-inline-size: 65ch;
 	margin-block: var(--size-sm);
@@ -81,6 +88,7 @@ a{
 	text-decoration: underline;
 }
 
+/*quotes read like a caption on a film poster*/
 blockquote{
 	font-family:var(--font-display);
 	font-size: var(--size-lg);
@@ -92,6 +100,7 @@ blockquote{
 	color:var(--color-quiet);
 }
 
+/*made to have more of a visual distinction for them to sit in a slightly lighter "frame"*/
 .image-description{
 	font-style: italic;
 	font-size: calc(var(--base) * 0.93);
