@@ -1,0 +1,28 @@
+root{
+	--color-paper: #f3efe6;
+	--color-ink: #1e2a44;
+	--color-quiet: #7a7468;
+	--color-blue: #2f6fb0;
+	--color-grey: #dbe6f2;
+
+	--font-display: 'Young Serif', sans-serif;
+	--font-body: 'Literata';
+	--font-label: 'Martian Mono';
+}
+
+body{
+	font-family: var(--font-body);
+	font-size: calc(var(--base) * 1.0625);
+	line-height: 1.65;
+	color: var(--color-ink);
+	background-color: var(--color-paper);
+	padding-block: var(--size-lg);
+	padding-inline: var(--size-md);
+}
+
+header,footer{
+	font-family: var(--font-label);
+	font-size: calc(var(--base) * 0.625);
+	letter-spacing: 0.06rem;
+	
+}
