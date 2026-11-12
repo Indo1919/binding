@@ -91,3 +91,9 @@ blockquote{
 .custom-underline{
 	text-decoration: underline;
 }
+
+main{
+	background-color: var(--color-white);
+	padding-block: var(--size-sm);
+	padding-inline: var(--size-sm);
+}
