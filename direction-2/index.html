@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>What Screens Want / Binding</title>
+		<title>Interface Writing / Binding</title>
 
 		<style>
 			@import '../styles/reset.css' layer(reset);
@@ -25,19 +25,98 @@
 <main>
 <article>
 		<header>
-			<h1> What Screens Want</h1>
-			<p> <time> November 14, 2013 </time> </p>
-			<p>By Frank Chimero</p>
+			<h1> Interface Writing: Code for Humans</h1>
+			<p> <time> August 2, 2014 </time> </p>
+			<p>By Nicole Fenton</p>
 		</header>
 
-		<p>These thoughts on digital canvases were first presented on <a href="https://2013.buildconf.com/#conference"> November 14, 2013 at Build in Belfast, N. Ireland </a>. This page is an adaptation of my talk.</p>
+		<p>I gave this talk at Burlington Ruby Conference in Vermont and Blend Conference in Charlotte, North Carolina.</p>
 
-		<p> The past two years were a wild chase for answers. I read books, looked at art, listened to my heroes, and sketched out scratchy thoughts of my own to search for any sensible response to a question that had been lodged in my head for months: What does it mean to natively design for screens?</p>
+		<p> The web and the world are full of instructions. Everywhere you go, signs and people are telling you what to do.</p>
 
-		<p>I couldn’t get the question out of my head. I tried to find its contours, and just as I thought I had made some progress on a response, a new part of the picture appeared and showed I only had a shadow of an answer. After many failures, I began to see which approaches worked better. The way toward an answer is never what you expect, so I was surprised that mine began with a routine trip to the pharmacy.</p>
+		<p>Walk. Don’t walk.</p>
+
+	<p class="image-description">Man is standing about to cross a crosswalk in San Francisco with a bus on the other side of the street</p>
+
+		<p>Follow me please. Stop. Hang on. Please stand clear.</p>
+
+	<p class="image-description">A closed storefront with steel coverings on the windows</p>
+
+		<p>Fasten your seatbelt. Read this.</p>
+
+	<p class="image-description"></p>
+
+		<p>Do this.</p>
+
+	<p class="image-description"></p>
+
+		<p>Take this. Buy this. Find us on Facebook. Please enter your name.</p>
+
+	<p class="image-description"></p>
+
+		<p>You get the idea. So bossy.</p>
+
+		<p>Think about the app you’re building right now.</p>\
+
+		<p>What actions can people take? What are you asking them to do? What are you allowing them to do? What are the rules and dead-ends? What sort of language do you use to guide people?</p>
+
+	<p class="image-description"></p>
+		<p>Whatever you’re building, you need to think about the content in the database and the instructions around it. I call those things interface writing. Some people call them microcopy since they’re usually short.</p>
+
 
 <section>
-		<h2>The Aspirin</h2>
+		<h2>The Interface Writing</h2>
+
+			<ul>
+				<li>buttons</li>
+				<li>notifications</li>
+				<li>errors and alerts</li>
+				<li>forms</li>
+				<li>in-app disclosures</li>
+				<li>links</li>
+				<li>navigation</li>
+				<li>product tours</li>
+				<li>setting names</li>
+				<li>tooltips</li>
+				<li>transactional emails</li>
+			</ul>
+
+		<p>From navigation links and buttons to product tours, forms, and error messages—every string in your database is an instruction. These are your signposts, and they grab your reader’s attention.</p>
+
+		<p>As developers and writers, you have a lot of power. The user wants something. Maybe it’s information, an easier way of doing things, chocolate chip cookies, or hilarious cat videos.</p>
+
+	<p class="image-description"></p>
+
+		<p>With clear instructions and a warm tone, you can help them find what they need quickly without having to ask anyone for help.</p>
+
+		<p>Let me tell you a story. This is my dad. He’s a test engineer. He works on semiconductors and develops tests for parts and batteries. So growing up, we always had computers around the house and the latest in PC technology.</p>
+
+	<p class="image-description"></p>
+
+		<p>We used to have this program called Dr. Sbaitso, which you may have heard of. It was a computerized psychologist slash artificial intelligence program designed to show off sound cards, but I thought it was a game and used to play with it for hours.</p>
+
+		<p>This is what it looked like. A typical, boring DOS interface.</p>
+
+	<p class="image-description"></p>
+
+	<p class="image-description"></p>
+
+		<p>Dr. Sbaitso would tell me what to do and I’d tell him about my 9-year-old problems. At the time, I was usually hungry or tired or bored. So I would answer in one of three ways.</p>
+
+	<p class="image-description"> >I'm, bored.</p>
+
+		<p>And then he would ask, “Why are you bored?” or “Are you sure you are bored?” And then I would say, yes, I’m sure and start repeating myself. Next thing I know, he’s shouting a zen koan at me like this:</p>
+
+	<p class="image-description">THE WORLD IS FULL OF POSSIBILITIES, NICOLE, BE HAPPY WITH WHAT YOU ARE</p>
+
+		<p>And this would result in me having a tiny existential freakout. I would get sick of that topic and switch over to cussing or saying something inappropriate. And if I did that long enough, Dr. Sbaitso would throw a parity error.</p>
+
+		<p>The reason I bring this up is that it shapes how I think about interface writing. Dr. Sbaitso was pre-programmed with all of these different strings to respond with.</p>
+
+	<p class="image-description"></p>
+
+
+
 
 <!-- Trying to structure the article into sections to breakdown the wall of text-->
 
