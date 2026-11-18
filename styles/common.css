@@ -8,4 +8,117 @@
 	--size-lg:calc(var(--base) * 1.75);
 	--size-xlg:calc(var(--base) * 2.5);
 	--size-xxlg:calc(var(--base) * 3.5);
+
+	--font-screens: 'VT323', monospace;
+	--font-screens-text: 'IBM Plex Mono', monospace;
+	--font-interface: 'Gelasio', serif;
+	--font-interface-text: 'Noto Sans', sans-serif;
+	--font-words: 'Inter', sans-serif;
+
+	/* early desktop */
+	--color-desk: #a9afb2;
+	--color-bar: #dddddd;
+	--black: #000000;
+	--white: #ffffff;
+
+	/* 2000s web */
+	--color-web: #d3dee9;
+	--color-web-blue: #2b5a9e;
+	--color-web-light: #eaf1f8;
+	--color-web-orange: #f28a1a;
+	--color-web-text: #333333;
+	--color-web-note: #fffde7;
+
+	/* now */
+	--color-now: #f5f5f7;
+	--color-now-ink: #1d1d1f;
+	--color-now-quiet: #6e6e73;
+	--color-now-blue: #0071e3;
+	--color-now-segment: #e8e8ed;
 }
+
+/*baseline doc setup acting like defualt setting for all pages*/
+body {
+	background-color: var(--white);
+	color: var(--color-now-ink);
+	font-family: var(--font-words);
+	font-size: var(--size-sm);
+	line-height: 1.6;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-xsm);
+	padding-block: var(--size-sm);
+	padding-inline: var(--size-sm);
+}
+
+.site-title {
+	font-weight: 700;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--size-sm);
+	font-weight: 600;
+}
+
+a {
+	color: var(--color-now-ink);
+}
+
+main, footer {
+	padding-block: var(--size-lg);
+	padding-inline: var(--size-sm);
+}
+
+article {
+	max-inline-size: 65ch;
+}
+
+p {
+	margin-block: var(--size-sm);
+}
+
+/*Inteded just for landing page*/
+h1 {
+	font-size: var(--size-xxlg);
+	font-weight: 700;
+	line-height: 1;
+}
+
+h2 {
+	color: var(--color-now-quiet);
+	font-size: var(--size-md);
+}
+
+.era-screens {
+	background-color: var(--color-bar);
+	font-family: var(--font-screens);
+	font-size: var(--size-md);
+	text-align: center;
+}
+
+.era-interface {
+	background-color: var(--color-web-blue);
+	color: var(--white);
+	font-family: var(--font-interface-text);
+	font-size: var(--size-xsm);
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-inline: var(--size-xsm);
+}
+
+.era-words {
+	color: var(--color-now-blue);
+	font-weight: 600;
+}
+
+@media (width > 800px){
+	h1 {
+		font-size: calc(var(--base) * 7);
+	}
+}
+
