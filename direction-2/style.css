@@ -1,115 +1,139 @@
 /*taking design inspiration from the Fenton articles the intent behind this direction is for it to communicate the idea of change over time. A screen changes, a conversation moving to what is next, and an idea that is going through drafts and evolivng. This design is intended to communicate more like a film poster and a film strip behind it.*/
 
 /*general doc setup*/
-:root{
---color-screen: #111111;
---color-ink: #f4f1ea;
---color-quiet: #8a8a8a;
---color-frame: #1e1e1e;
---color-red: #ff3b1f;
-
---font-display: 'Big Shoulders Display', sans-serif;
---font-body: 'Instrument Sans';
---font-label: "IBM Plex Mono";
-}
-
-/*paragraph text is a little bigger so the whole page feels more dramatic*/
-body{
-	font-family:var(--font-body);
-	font-size:var(--size-md);
+body {
+	background-color: var(--color-web);
+	color: var(--color-web-text);
+	font-family: var(--font-interface);
+	font-size: calc(var(--base) * 1.125);
 	line-height: 1.6;
-	color:var(--color-ink);
-	background-color:var(--color-screen);
-	padding-block:var(--size-lg);
-	padding-inline:var(--size-md);
 }
 
-/*intent is for this to look like a film credit*/
-header,footer{
-	font-family:var(--font-label);
-	font-size: calc(var(--base) * 0.68);
-	letter-spacing: 0.1em;
-	color:var(--color-quiet);
-	margin-block: var(--size-md);
+/*The blue bar at the top*/
+header {
+	background-color: var(--white);
+	gap: 0;
+	padding-block: 0;
+	padding-inline: 0;
+	margin-inline: var(--size-sm);
+	margin-block-start: var(--size-sm);
 }
 
-/*intent to look like a poster*/
-h1{
-	font-family:var(--font-display);
-	font-size: calc(var(--base) * 5);
-	font-weight: 900;
-	line-height: 0.9;
-	text-transform: uppercase;
-	color: var(--color-ink);
-	margin-block: var(--size-sm);
-}
-
-h2{
-	font-family: var(--font-display);
-	font-size: calc(var(--base) * 2.75);
+.site-title {
+	background-color: var(--color-web-light);
+	color: var(--color-web-blue);
+	font-size: var(--size-md);
 	font-weight: 700;
-	line-height: 0.95;
-	text-transform: uppercase;
-	margin-block: var(--size-xlg);
-}
-
-h3{
-	font-family:var(--font-display);
-	font-size: calc(var(--base) * 2.125);
-	font-weight: 900;
-	text-transform: uppercase;
-	color: var(--color-red);
-	margin-block: var(--size-md);
-}
-
-/*keeps lines from getting to long*/
-p,li{
-	max-inline-size: 65ch;
-	margin-block: var(--size-sm);
-}
-
-strong{
-	font-weight: 700;
-	color: var(--color-red);
-}
-
-em{
-	font-style: italic;
-	color:var(--color-red);
-}
-
-mark{
-	background-color:var(--color-red);
-	color:var(--color-screen);
-}
-
-a{
-	color:var(--color-ink);
-	text-decoration: underline;
-}
-
-/*quotes read like a caption on a film poster*/
-blockquote{
-	font-family:var(--font-display);
-	font-size: var(--size-lg);
-	font-weight: 300;
-	line-height: 1.15;
-	margin-block: var(--size-lg);
-	text-transform: uppercase;
-	letter-spacing: 0.02em;
-	color:var(--color-quiet);
-}
-
-/*made to have more of a visual distinction for them to sit in a slightly lighter "frame"*/
-.image-description{
-	font-style: italic;
-	font-size: calc(var(--base) * 0.93);
-	color:var(--color-quiet);
-	background-color:var(--color-frame);
 	padding-block: var(--size-xsm);
-	padding-inline: var(--size-xsm);
+	padding-inline: var(--size-sm);
+	margin-block: 0;
 }
 
-.custom-underline{
-	text-decoration: underline;
+nav {
+	font-weight: 700;
+	gap: var(--size-lg);
+	padding-block: var(--size-sm);
+	padding-inline: var(--size-sm);
+}
+
+a {
+	color: var(--color-web-blue);
+}
+
+main, footer {
+	background-color: var(--white);
+	margin-inline: var(--size-sm);
+}
+
+footer {
+	display: flex;
+	gap: var(--size-sm);
+	font-weight: 700;
+	margin-block-end: var(--size-sm);
+}
+
+.era {
+	color: var(--color-web-blue);
+	font-size: var(--size-sm);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+h1, h2, h3 {
+	color: var(--color-web-blue);
+	font-weight: 700;
+}
+
+h1 {
+	font-size: var(--size-xlg);
+	line-height: 1.1;
+	text-wrap: balance;
+}
+
+h2 {
+	background-color: var(--color-web-light);
+	border-radius: 0.5rem;
+	font-size: var(--size-lg);
+	padding-block: var(--size-xsm);
+	padding-inline: var(--size-sm);
+}
+
+h3 {
+	font-size: var(--size-md);
+}
+
+time {
+	color: var(--color-web-quiet);
+}
+
+ul, ol {
+	background-color: var(--color-web-light);
+	border-radius: 0.5rem;
+	color: var(--color-web-blue);
+	font-weight: 700;
+	padding-block: var(--size-sm);
+	padding-inline: var(--size-lg);
+	font-size: var(--size-md);
+}
+
+.image-description {
+	background-color: var(--color-web);
+	border-radius: 0.5rem;
+	color: var(--color-web-quiet);
+	font-size: var(--size-sm);
+	padding: var(--size-sm);
+}
+
+blockquote {
+	background-color: var(--color-web-blue);
+	border-radius: 0.5rem;
+	color: var(--white);
+	font-style: italic;
+	padding: var(--size-md);
+}
+
+/*for bigger screens*/
+@media (width > 800px) {
+
+	header, main, footer {
+		margin-inline: var(--size-xlg);
+	}
+
+	header {
+		margin-block-start: var(--size-xlg);
+	}
+
+	main {
+		padding-inline: var(--size-xlg);
+	}
+
+	footer {
+		padding-inline: var(--size-xlg);
+		margin-block-end: var(--size-xlg);
+	}
+
+	h1 {
+		font-size: var(--size-xxlg);
+	}
 }

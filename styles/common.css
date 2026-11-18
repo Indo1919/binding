@@ -11,7 +11,7 @@
 
 	--font-screens: 'VT323', monospace;
 	--font-screens-text: 'IBM Plex Mono', monospace;
-	--font-interface: 'Gelasio', serif;
+	--font-interface: 'Atkinson Hyperlegible', sans-serif;
 	--font-interface-text: 'Noto Sans', sans-serif;
 	--font-words: 'Inter', sans-serif;
 
@@ -22,12 +22,11 @@
 	--white: #ffffff;
 
 	/* 2000s web */
-	--color-web: #d3dee9;
-	--color-web-blue: #2b5a9e;
-	--color-web-light: #eaf1f8;
-	--color-web-orange: #f28a1a;
-	--color-web-text: #333333;
-	--color-web-note: #fffde7;
+	--color-web: #ebeff4;
+	--color-web-blue: #254d83;
+	--color-web-light: #e4ecf6;
+	--color-web-text: #242d39;
+	--color-web-quiet: #5c6571;
 
 	/* now */
 	--color-now: #f5f5f7;
@@ -104,7 +103,7 @@ h2 {
 .era-interface {
 	background-color: var(--color-web-blue);
 	color: var(--white);
-	font-family: var(--font-interface-text);
+	font-family: var(--font-interface);
 	font-size: var(--size-xsm);
 	font-weight: 700;
 	text-transform: uppercase;

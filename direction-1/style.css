@@ -46,7 +46,7 @@ article {
 
 h1 {
 	font-family: var(--font-screens);
-	font-size: var(--size-xxlg);
+	font-size: calc(var(--size-xxlg) * 1.5);
 	font-weight: 400;
 	line-height: 0.9;
 }
