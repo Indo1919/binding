@@ -7,6 +7,7 @@ body {
 	font-family: var(--font-interface);
 	font-size: calc(var(--base) * 1.125);
 	line-height: 1.6;
+	padding-block: var(--size-sm);
 }
 
 /*The blue bar at the top*/
@@ -16,7 +17,6 @@ header {
 	padding-block: 0;
 	padding-inline: 0;
 	margin-inline: var(--size-sm);
-	margin-block-start: var(--size-sm);
 }
 
 .site-title {
@@ -49,7 +49,6 @@ footer {
 	display: flex;
 	gap: var(--size-sm);
 	font-weight: 700;
-	margin-block-end: var(--size-sm);
 }
 
 .era {
@@ -120,8 +119,8 @@ blockquote {
 		margin-inline: var(--size-xlg);
 	}
 
-	header {
-		margin-block-start: var(--size-xlg);
+	body {
+		padding-block: var(--size-xlg);
 	}
 
 	main {
@@ -130,7 +129,6 @@ blockquote {
 
 	footer {
 		padding-inline: var(--size-xlg);
-		margin-block-end: var(--size-xlg);
 	}
 
 	h1 {

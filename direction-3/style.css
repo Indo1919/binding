@@ -1,104 +1,105 @@
 /*chimero in this article describes interfaces llike maps that help us understand something and always leaves things out. Fenton does the same in interface writing and words as materials that shared language work the same way. The intent of this design direction is like an old printed map with warm paper and nacy ink as well as a blue signifiying a shallow water*/
 
 /*general doc setup*/
-:root{
-	--color-paper: #f3efe6;
-	--color-ink: #1e2a44;
-	--color-quiet: #7a7468;
-	--color-blue: #2f6fb0;
-	--color-grey: #dbe6f2;
-
-	--font-display: 'Young Serif', sans-serif;
-	--font-body: 'Literata';
-	--font-label: 'Martian Mono';
+body {
+	background-color: var(--color-now);
+	color: var(--color-now-ink);
+	font-family: var(--font-words);
+	font-size: calc(var(--base) * 1.125);
+	line-height: 1.6;
 }
 
-/*started with the text and the built up*/
-body{
-	font-family: var(--font-body);
-	font-size: calc(var(--base) * 1.0625);
-	line-height: 1.65;
-	color: var(--color-ink);
-	background-color: var(--color-paper);
-	padding-block: var(--size-lg);
-	padding-inline: var(--size-md);
+header {
+	background-color: var(--white);
 }
 
-/*intended to look like a small label on a map*/
-header,footer{
-	font-family: var(--font-label);
-	font-size: calc(var(--base) * 0.625);
-	letter-spacing: 0.06rem;
-	color: var(--color-quiet);
-	margin-block: var(--size-md);
+.site-title {
+	font-weight: 600;
 }
 
-h1{
-	font-family: var(--font-display);
-	font-size: calc(var(--base) * 2.75);
+nav {
+	background-color: var(--color-now-segment);
+	border-radius: 0.625rem;
+	font-size: var(--size-sm);
+	font-weight: 500;
+	padding-block: var(--size-xsm);
+	padding-inline: var(--size-sm);
+}
+
+a {
+	color: var(--color-now-ink);
+}
+
+article {
+	background-color: var(--white);
+	border-radius: 1.75rem;
+	padding: var(--size-lg);
+}
+
+.era {
+	color: var(--color-now-blue);
+	font-weight: 600;
+}
+
+h1 {
+	font-size: var(--size-xxlg);
+	font-weight: 700;
 	line-height: 1.05;
-	letter-spacing: -0.02em;
-	color: var(--color-ink);
-	margin-block: var(--size-sm);
+	text-wrap: balance;
 }
 
-h2{
-	font-family: var(--font-display);
+time {
+	color: var(--color-now-quiet);
+}
+
+h2 {
+	color: var(--color-now-ink);
 	font-size: var(--size-lg);
-	line-height: 1.15;
+	font-weight: 700;
+	line-height: 1.2;
 	margin-block: var(--size-xlg);
 }
 
-/*smaller headings in a lighter blue to signifiy a shallower level*/
-h3{
-	font-family: var(--font-display);
-	font-size: calc(var(--base) * 1.3);
-	color: var(--color-blue);
-	margin-block: var(--size-md);
-}
-
-/*keeping lines from getting to long*/
-p,li{
-	max-inline-size: 65ch;
-	margin-block: var(--size-sm);
-}
-
-strong{
+h3 {
+	font-size: var(--size-md);
 	font-weight: 700;
-}
-
-em{
-	font-style: italic;
-}
-
-mark{
-	background-color:var(--color-grey);
-	color:var(--color-ink);
-}
-
-a{
-	color:var(--color-blue);
-	text-decoration: underline;
-}
-
-/*quote is centered in a patch of shallow water*/
-blockquote{
-	font-family: var(--font-display);
-	font-size: calc(var(--base) * 1.3);
-	line-height: 1.35;
-	text-align: center;
-	color: var(--color-blue);
 	margin-block: var(--size-lg);
-	background-color: var(--color-grey);
-	padding-block: var(--size-md);
+}
+
+blockquote {
+	background-color: var(--color-now);
+	border-radius: 1.25rem;
+	padding-block: var(--size-sm);
 	padding-inline: var(--size-md);
 }
 
-.image-description{
-	font-style: italic;
-	color:var(--color-blue);
+footer {
+	display: flex;
+	gap: var(--size-sm);
+	font-weight: 500;
 }
 
-.custom-underline{
-	text-decoration:underline;
+/*for bigger screens*/
+@media (width > 800px) {
+
+	header {
+		flex-direction: row;
+		gap: var(--size-lg);
+	}
+
+	main {
+		padding-inline: var(--size-xlg);
+	}
+
+	article {
+		padding: calc(var(--base) * 3.5);
+	}
+
+	h1 {
+		font-size: calc(var(--base) * 5.25);
+	}
+
+	h2 {
+		font-size: calc(var(--base) * 2.25);
+	}
 }

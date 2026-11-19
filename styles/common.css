@@ -86,6 +86,7 @@ h1 {
 	font-size: var(--size-xxlg);
 	font-weight: 700;
 	line-height: 1;
+	text-wrap: balance;
 }
 
 h2 {
@@ -93,11 +94,19 @@ h2 {
 	font-size: var(--size-md);
 }
 
+.intro {
+	color: var(--color-now-quiet);
+	font-size: var(--size-md);
+	max-inline-size: 40ch;
+}
+
 .era-screens {
 	background-color: var(--color-bar);
 	font-family: var(--font-screens);
 	font-size: var(--size-md);
 	text-align: center;
+	padding-block: 0.25rem;
+	margin-block: var(--size-lg);
 }
 
 .era-interface {
@@ -108,12 +117,23 @@ h2 {
 	font-weight: 700;
 	text-transform: uppercase;
 	padding-inline: var(--size-xsm);
+	border-radius: 0.5rem;
+	padding-block: 0.25rem;
+	margin-block: var(--size-lg);
 }
 
 .era-words {
 	color: var(--color-now-blue);
 	font-weight: 600;
+	display: inline-block;
+	background-color: var(--color-now-segment);
+	border-radius: 999px;
+	padding-block: 0.25rem;
+	padding-inline: var(--size-sm);
+	margin-block: var(--size-lg);
 }
+
+
 
 @media (width > 800px){
 	h1 {
